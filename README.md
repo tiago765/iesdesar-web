@@ -4,6 +4,8 @@ Proposta de nova web para o IES de Sar (Santiago de Compostela), feita en WordPr
 
 **Ver a web:** https://playground.wordpress.net/?mode=seamless&blueprint-url=https://raw.githubusercontent.com/tiago765/iesdesar-web/main/blueprint.json
 
+**Versión co banner "Admisión FP" no canto do pase de fotos:** https://playground.wordpress.net/?mode=seamless&blueprint-url=https://raw.githubusercontent.com/tiago765/iesdesar-web/main/blueprint-banner.json
+
 A web ábrese no teu navegador cun WordPress de proba (WordPress Playground). A primeira carga tarda un minuto. Os cambios que fagas non se gardan nin afectan a ninguén.
 
 - `iesdesar.zip`: versión lixeira do tema para a vista previa (deseño + contido traído da web antiga do centro).

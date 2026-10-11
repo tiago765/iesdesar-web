@@ -1,0 +1,32 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/",
+	"preferredVersions": {
+		"php": "8.2",
+		"wp": "latest"
+	},
+	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "IES de Sar",
+				"blogdescription": "Santiago de Compostela"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/tiago765/iesdesar-web/main/iesdesar.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/themes/iesdesar/templates/front-page.html",
+			"data": "<!-- wp:template-part {\"slug\":\"header\",\"area\":\"header\",\"tagName\":\"div\"} /-->\n\n<!-- wp:group {\"tagName\":\"main\",\"className\":\"portada\",\"layout\":{\"type\":\"constrained\"}} -->\n<main class=\"wp-block-group portada\"><!-- wp:pattern {\"slug\":\"iesdesar/banner\"} /-->\n\n<!-- wp:pattern {\"slug\":\"iesdesar/accesos\"} /-->\n\n<!-- wp:group {\"className\":\"noticias\",\"layout\":{\"type\":\"default\"}} -->\n<div class=\"wp-block-group noticias\"><!-- wp:heading {\"className\":\"noticias__titulo\"} -->\n<h2 class=\"wp-block-heading noticias__titulo\">Noticias</h2>\n<!-- /wp:heading -->\n\n<!-- wp:query {\"queryId\":1,\"query\":{\"perPage\":9,\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"inherit\":false},\"className\":\"carrusel\"} -->\n<div class=\"wp-block-query carrusel\"><!-- wp:post-template -->\n<!-- wp:group {\"className\":\"nova\",\"layout\":{\"type\":\"default\"}} -->\n<div class=\"wp-block-group nova\"><!-- wp:post-title {\"level\":3,\"isLink\":true,\"className\":\"nova__titulo\"} /-->\n\n<!-- wp:group {\"className\":\"nova__corpo\",\"layout\":{\"type\":\"default\"}} -->\n<div class=\"wp-block-group nova__corpo\"><!-- wp:post-excerpt {\"moreText\":\"\",\"excerptLength\":22,\"className\":\"nova__resumo\"} /-->\n\n<!-- wp:post-featured-image {\"isLink\":true,\"className\":\"nova__imaxe\"} /--></div>\n<!-- /wp:group --></div>\n<!-- /wp:group -->\n<!-- /wp:post-template -->\n\n<!-- wp:query-no-results -->\n<!-- wp:paragraph -->\n<p>Aínda non hai noticias.</p>\n<!-- /wp:paragraph -->\n<!-- /wp:query-no-results --></div>\n<!-- /wp:query --></div>\n<!-- /wp:group -->\n\n<!-- wp:pattern {\"slug\":\"iesdesar/proxectos\"} /--></main>\n<!-- /wp:group -->\n\n<!-- wp:template-part {\"slug\":\"footer\",\"area\":\"footer\",\"tagName\":\"div\"} /-->\n"
+		}
+	]
+}
