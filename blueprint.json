@@ -1,0 +1,13 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/",
+	"preferredVersions": { "php": "8.2", "wp": "latest" },
+	"steps": [
+		{ "step": "setSiteOptions", "options": { "blogname": "IES de Sar", "blogdescription": "Santiago de Compostela" } },
+		{
+			"step": "installTheme",
+			"themeData": { "resource": "url", "url": "https://raw.githubusercontent.com/tiago765/iesdesar-web/main/iesdesar.zip" },
+			"options": { "activate": true }
+		}
+	]
+}
