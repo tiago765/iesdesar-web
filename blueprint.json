@@ -17,7 +17,7 @@
 			"step": "installTheme",
 			"themeData": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/tiago765/iesdesar-web/main/iesdesar.zip"
+				"url": "https://raw.githubusercontent.com/tiago765/iesdesar-web/main/iesdesar.zip?v=1d90db98"
 			},
 			"options": {
 				"activate": true
