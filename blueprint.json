@@ -1,13 +1,34 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"landingPage": "/",
-	"preferredVersions": { "php": "8.2", "wp": "latest" },
+	"preferredVersions": {
+		"php": "8.2",
+		"wp": "latest"
+	},
 	"steps": [
-		{ "step": "setSiteOptions", "options": { "blogname": "IES de Sar", "blogdescription": "Santiago de Compostela" } },
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "IES de Sar",
+				"blogdescription": "Santiago de Compostela"
+			}
+		},
 		{
 			"step": "installTheme",
-			"themeData": { "resource": "url", "url": "https://raw.githubusercontent.com/tiago765/iesdesar-web/main/iesdesar.zip" },
-			"options": { "activate": true }
+			"themeData": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/tiago765/iesdesar-web/main/iesdesar.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "updateUserMeta",
+			"userId": 1,
+			"meta": {
+				"show_admin_bar_front": "false"
+			}
 		}
 	]
 }
