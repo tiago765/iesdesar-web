@@ -22,13 +22,6 @@
 			"options": {
 				"activate": true
 			}
-		},
-		{
-			"step": "updateUserMeta",
-			"userId": 1,
-			"meta": {
-				"show_admin_bar_front": "false"
-			}
 		}
 	]
 }
