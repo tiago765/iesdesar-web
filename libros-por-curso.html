@@ -494,6 +494,19 @@ body { background:#fff !important; color:var(--ns-negro); font-family:"Segoe UI"
 #content .bloque-documentos li a:hover { text-decoration:underline; }
 .bloque-documentos li a[href$=".pdf"]::before { content:"PDF"; flex:none; font-size:.65rem; font-weight:800; color:#fff; background:#c0392b; border-radius:4px; padding:3px 5px; }
 .foto-instagram img { max-width:420px; width:100%; border-radius:var(--ns-raio); }
+/* Libros por curso: unha tarxeta por etapa, co mosaico de portadas */
+.libros-tarxetas { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; margin:28px 0; }
+#content .libros-tarxeta { display:flex; flex-direction:column; border:1.5px solid var(--ns-negro); border-radius:var(--ns-raio); overflow:hidden; background:#fff; color:var(--ns-negro); text-decoration:none; transition:transform .2s, box-shadow .2s; }
+#content .libros-tarxeta:hover { transform:translateY(-3px); box-shadow:0 10px 24px rgba(18,79,130,.14); text-decoration:none; }
+#content .libros-tarxeta img { width:100%; height:auto; aspect-ratio:5 / 3; object-fit:cover; display:block; }
+.libros-tarxeta__texto { display:flex; flex-direction:column; gap:4px; padding:18px 20px 20px; border-top:1.5px solid var(--ns-negro); }
+.libros-tarxeta__titulo { font-size:1.3rem; font-weight:700; color:#124f82; }
+.libros-tarxeta__cursos { color:var(--ns-gris); font-size:.95rem; }
+.libros-tarxeta__boton { align-self:flex-start; display:inline-flex; align-items:center; gap:8px; margin-top:12px; padding:9px 16px; border-radius:999px; background:var(--ns-azul); color:#fff; font-weight:600; font-size:.95rem; }
+.libros-tarxeta__boton::before { content:"PDF"; font-size:.65rem; font-weight:800; background:#fff; color:var(--ns-azul); border-radius:4px; padding:2px 5px; }
+.libros-tarxeta:hover .libros-tarxeta__boton { background:#124f82; }
+.libros-nota { color:var(--ns-gris); font-size:.95rem; }
+@media (max-width:860px) { .libros-tarxetas { grid-template-columns:1fr; gap:18px; } }
 @media (max-width:860px) { .bloque-documentos { padding:18px 16px; } #content .node .content table { display:block; overflow-x:auto; } }
 
 /* ---------- Barra de administración (só con sesión iniciada) ---------- */
@@ -982,10 +995,7 @@ body { background:#fff !important; color:var(--ns-negro); font-family:"Segoe UI"
 </div>
 </div>
 </div>
-						<div class="breadcrumb"><a href="index.html">Inicio</a></div><h1 class="title">Libros por curso</h1><div class="content-middle"><div class="node"><div class="content"><p>Achegamos a listaxe de libros de texto para o curso 2025/26. Como recomendación xeral, aconsellamos non mercar os libros ata o inicio das clases.</p>
-
-<p><a href="ficheiros/docs/libros-de-texto-ies-de-sar-eso.pdf">Libros de texto ESO</a></p>
-<p><a href="ficheiros/docs/libros-de-texto-ies-de-sar-curso-bac.pdf">Libros de texto Bacharelato</a></p></div></div></div>
+						<div class="breadcrumb"><a href="index.html">Inicio</a></div><h1 class="title">Libros por curso</h1><div class="content-middle"><div class="node"><div class="content"><p>Achegamos a listaxe de libros de texto para o curso 2025/26, con cada libro acompañado da súa portada para que sexa máis fácil recoñecelo. Como recomendación xeral, aconsellamos non mercar os libros ata o inicio das clases.</p><!-- wp:html --><div class="libros-tarxetas"><a class="libros-tarxeta" href="ficheiros/docs/libros-de-texto-ies-de-sar-eso-con-portadas.pdf"><img src="ficheiros/img/libros-eso-portadas.jpg" alt="Portadas dalgúns libros de texto da ESO" width="1200" height="720" loading="lazy"><span class="libros-tarxeta__texto"><span class="libros-tarxeta__titulo">Libros de texto ESO</span><span class="libros-tarxeta__cursos">1º, 2º, 3º e 4º ESO · curso 2025/26</span><span class="libros-tarxeta__boton">Descargar PDF</span></span></a><a class="libros-tarxeta" href="ficheiros/docs/libros-de-texto-ies-de-sar-bac-con-portadas.pdf"><img src="ficheiros/img/libros-bac-portadas.jpg" alt="Portadas dalgúns libros de texto de Bacharelato" width="1200" height="720" loading="lazy"><span class="libros-tarxeta__texto"><span class="libros-tarxeta__titulo">Libros de texto Bacharelato</span><span class="libros-tarxeta__cursos">1º e 2º Bacharelato · curso 2025/26</span><span class="libros-tarxeta__boton">Descargar PDF</span></span></a></div><!-- /wp:html --><p class="libros-nota">En cada curso indícase que libros entran no <strong>fondo de libros</strong>, cales <strong>non se deben mercar ata consultar co profesorado</strong> e que materias traballan con <strong>E-Dixgal</strong>. As portadas son orientativas: comprobade sempre o ISBN antes de mercar un libro.</p></div></div></div>
 </div> <!-- end content -->
 
 			<div id="sidebar-right" class="sidebar">
